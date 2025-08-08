@@ -1,0 +1,82 @@
+:root{
+  --header-font: "young-serif", serif;
+  --other-fonts: "outfit", sans-serif;
+  --heading-color: hsl(14, 45%, 36%);
+  --background-color: hsl(332, 51%, 32%);
+  --container-color: hsl(330, 100%, 98%);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 5px 0;
+}
+
+@font-face{
+  font-family: "young-serif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--heading-color);
+  padding: 0;
+}
+
+.container{
+  background-color: var(--container-color);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 30px 300px;
+}
+img{
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+}
+h1{
+  font-family: var(--header-font);
+  font-size: 2.5em;
+  font-weight: 300;
+  padding: 0 10px;
+}
+.preparation{
+  border: 1px solid white;
+  border-radius:10px;
+  background-color: hsl(30, 18%, 87%);
+}
+.outfit{
+  font-family: var(--other-fonts);
+  font-size: 1em;
+}
+.ingredients > p, .instructions > p, .nutrition > p:not(.outfit){
+  font-family: var(--header-font);
+  font-size: 1.5em;
+  color: var(--heading-color);
+  padding: 0 10px;
+}
+.preparation > p{
+  font-family: var(--other-fonts);
+  color: var(--background-color);
+  padding: 0 10px;
+}
+.container *{
+  margin: 15px 0;
+}
+.nutrition{
+  width: 100%;
+  overflow: hidden;
+}
+.nutrition table{
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
